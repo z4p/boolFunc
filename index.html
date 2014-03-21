@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+	<meta charset="utf-8">
+
+	<title>Метод Квайна</title>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.1/jquery.mobile.min.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.1/jquery.mobile.min.js"></script>
+	<script src="1.js"></script>
+	
+	<style>
+	td, button, select {
+		font-size: 20pt;
+	}
+	</style>
+</head>
+<body>
+<div data-role="page">
+	<div data-role="header"><h2>Метод Квайна</h2></div>
+	<div data-role="content" align="center">
+		<div style="padding:10px;">
+			<div>
+				<p>Количество переменных: </p>
+				<select id="x_count" onchange="drawFuncTable();">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div style="display: none;" id="main">
+				<p>(тап по строке для изменения)</p>
+				<table id="func_table" cellspacing="0" cellpadding="5" border="1"></table>
+				<button onclick="solve();">Мимимизация</button>
+			</div>
+		</div>
+		<div id="results" style="padding:10px;"></div>
+	</div>
+	<div data-role="footer"><h4>&copy; bykakashka &amp; z4p, 2014</h4></div>
+</div>
+</body>
+</html>
